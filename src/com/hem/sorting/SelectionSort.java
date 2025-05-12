@@ -4,7 +4,7 @@ public class SelectionSort
 {
     public static void main(String[] args) {
 
-        int arr[] = {23, 43, 2, 34, 53, 1};
+        int[] arr = {23, 43, 2, 34, 53, 1};
 
         for (int i = 0; i<arr.length-1; i++){
             int minIndex = i;
