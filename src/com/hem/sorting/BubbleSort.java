@@ -2,7 +2,7 @@ package com.hem.sorting;
 
 public class BubbleSort {
     public static void main(String[] args) {
-        int[] arr = {342, 324, 615, 34, 65, 2};
+        int[] arr = {0, 1, 2, 0, 1, 2};
 
         System.out.println("Before Sorting:");
         printArray(arr);
