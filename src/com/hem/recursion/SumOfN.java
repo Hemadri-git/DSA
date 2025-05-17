@@ -1,18 +1,17 @@
-package com.hem.test;
+package com.hem.recursion;
 
-
-
-public class Test {
+public class SumOfN
+{
     public static void main(String[] args) {
 
-        int a = sum(5);
-        System.out.println(a);
+        int res = sum(10);
+        System.out.println(res);
     }
     static int sum(int n){
         if (n <= 1){
             return 1;
         }
+
         return n + sum(n-1);
     }
-
 }
