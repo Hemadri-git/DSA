@@ -3,7 +3,7 @@ package com.hem.recursion;
 public class SumOfDigits
 {
     public static void main(String[] args) {
-        int ans = sum(564);
+        int ans = sum(5645);
         System.out.println(ans);
     }
     static int sum(int n){

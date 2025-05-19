@@ -1,18 +1,17 @@
 package com.hem.test;
 
-
-
 public class Test {
     public static void main(String[] args) {
-
-        int a = sum(5);
-        System.out.println(a);
+        fn(5);
     }
-    static int sum(int n){
-        if (n <= 1){
-            return 1;
+
+    static void fn(int n) {
+        if (n == 1){
+            System.out.println(n);
+            return;
         }
-        return n + sum(n-1);
+        fn(n-1);
+        System.out.println(n);
     }
 
 }
