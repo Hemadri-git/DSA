@@ -2,26 +2,30 @@ package com.hem.test;
 
 public class Test {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        int target = 6;
-        System.out.println(bs(arr, target, 0, arr.length - 1));
+
+
+        System.out.println(palin(33233));
+    }
+
+    static int fun(int n) {
+
+        int digits = (int)(Math.log10(n))+1;
+        return helper(n, digits);
 
     }
-    static int bs(int a[], int k, int s, int e) {
-        if (s > e) {
-            return -1;
+
+    private static int helper(int n, int digits) {
+
+        if (n%10 == n){
+            return n;
         }
-
-        int m = s + (e - s) / 2;
-
-        if (a[m] == k) {
-            return m;
-        }
-
-        if (a[m] < k) {
-            return bs(a, k, m + 1, e);
-        }
-        return bs(a, k, s, m - 1);
-
+        int rem = n%10;
+        return rem * (int)(Math.pow(10, digits-1)) + helper(n/10, digits-1);
     }
+
+    static boolean palin(int n){
+        return n == fun(n);
+    }
+
+
 }
